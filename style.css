@@ -1,6 +1,10 @@
 /*  shared styles start */
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500;600;700&family=Roboto:wght@700&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+}
 :root {
   --primary-color: #3a3a3a;
   --secondary-color: #18191f;
@@ -24,15 +28,15 @@ main {
   text-align: center;
   padding: 10px 24px;
   display: flex;
-  align-items: center;  
+  align-items: center;
   border: none;
 }
-.primary-btn:hover .material-symbols-outlined{
-    transform: translate(50px);
+.primary-btn:hover .material-symbols-outlined {
+  transform: translate(50px);
 }
-.primary-btn .material-symbols-outlined{
-    padding-left: 5px;
-    transition: transform linear 1s;
+.primary-btn .material-symbols-outlined {
+  padding-left: 5px;
+  transition: transform linear 1s;
 }
 .primary-title {
   color: var(--primary-color);
@@ -44,8 +48,6 @@ main {
 /* header section styles start */
 header {
   padding: 85px 120px;
- 
-  
 }
 nav {
   display: flex;
@@ -71,38 +73,87 @@ nav ul li a {
 
 /* banner section styles */
 .banner-section {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
-
-
-
- 
- 
+  gap: 100px;
 }
 .banner-title {
   color: var(--primary-color);
   font-size: 52px;
   font-weight: 700;
 }
-.banner-description{
-    color: var(--primary-color);
-    font-family: var(--primary-font);
-   font-weight: 600;
-   margin: 16px 0;
-   max-width: 500px;
+.banner-description {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-weight: 600;
+  margin: 16px 0;
+  max-width: 500px;
 }
-.banner-img{
-    background-image: url("./images/Circle\ design.svg");
-
+.banner-img {
+  background-image: url("./images/Circle\ design.svg");
 }
 
 /* header section styles end */
 /* sponsors section styles start */
-.sponsors-section{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 100px;
+.sponsors-section {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 100px;
 }
 /* sponsors section styles end */
+
+.rating {
+  color: #fadb14;
+  font-size: 18px;
+}
+
+/* header {
+  display: none;
+} */
+.collection-section {
+  display: none;
+}
+/* .sponsors-section{
+    display: none;
+} */
+
+/*   responsive styles MEDIA QUERY */
+/* small device responsive  */
+
+@media screen and (max-width: 576px) {
+  nav {
+    flex-direction: column;
+  }
+  nav .primary-title {
+    margin-top: 40px;
+  }
+  nav ul {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  header {
+    padding: 0;
+  }
+  .banner-section {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  .banner-image {
+    width: 100%;
+  }
+  .sponsors-section{
+    margin: 50px 10px;
+     flex-wrap: wrap;
+     gap: 20px;
+  }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    
+    header{
+        padding: 70px 40px;
+    }
+}
